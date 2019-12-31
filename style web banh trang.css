@@ -28,6 +28,7 @@
 .content{
     display:flex;
     justify-content:space-around;
+    flex-wrap: wrap;
 }
 img{
     margin: 0 4px 4px 0;
@@ -67,7 +68,7 @@ img{
   }
   
   .topnav a.active {
-    background-color: #4CAF50;
+    background-color: rgb(46, 214, 192);
     color: white;
   }
   * {box-sizing:border-box}
