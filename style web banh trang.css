@@ -28,7 +28,7 @@
 }
 #grad1 {
   height: 200px;
-  background-image: linear-gradient(to right, #333333 , grey ); /* Standard syntax (must be last) */
+  background-image: linear-gradient(to right, #333333 , grey )
 }
 .content{
     display:flex;
@@ -57,7 +57,7 @@ img{
     overflow: hidden;
   }
  body{
-    background: url(https://www.solidbackgrounds.com/images/website/950x534/950x534-blue-abstract-noise-free-website-background-image.jpg);
+    background: url(https://www.solidbackgrounds.com/images/website/950x534/950x534-blue-abstract-noise-free-website-background-image.jpg)
   }
  
   .topnav a {
