@@ -50,7 +50,9 @@ img{
     background-color: #333;
     overflow: hidden;
   }
-  
+  /*body{
+    background: url(https://image.winudf.com/v2/image/Y29tLmlwbW9iaWxlc29sdXRpb25zLndhbGxwYXBlcnNncmF5YWJzdHJhY3Rfc2NyZWVuXzZfMTUyMjY1NjQwOV8wNjc/screen-6.jpg?fakeurl=1&type=.jpg);
+  }*/
  
   .topnav a {
     float: left;
@@ -60,7 +62,6 @@ img{
     text-decoration: none;
     font-size: 17px;
   }
-  
   
   .topnav a:hover {
     background-color: #ddd;
@@ -75,7 +76,7 @@ img{
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 750px;
+  max-width: 1000px;
   position: relative;
   margin:auto ;
  
