@@ -14,6 +14,9 @@
     width:100%;
     
 }
+.input{
+  border: black solid 2px
+}
 .mua{
     display: flex;
     justify-content: center;
