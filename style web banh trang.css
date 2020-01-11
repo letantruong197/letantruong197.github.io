@@ -9,13 +9,29 @@
     color: black;
     font-weight: bold;
 }
+.khunggopy{
+ padding:0 16px 0 16px;
+ width:100%;
+}
+.noidungkhunggopy{
+  border: none ;
+  border-bottom: black solid 1.15px;
+  display: flex;
+ justify-content: space-between;
+ flex-direction: column;
+ width:100%
+}
 
 .hinh{
     width:100%;
     
 }
-.input{
-  border: black solid 2px
+.toankhunggopy{
+  padding-left:15px;
+  justify-content:  space-around;
+  display: flex;
+  padding:3px;
+  
 }
 .mua{
     display: flex;
@@ -31,7 +47,6 @@
     
 }
 #grad1 {
-  height: 200px;
   background-image: linear-gradient(to right, #333333 , grey )
 }
 .content{
@@ -44,6 +59,7 @@ img{
     padding: 0 4px 4px 0;
     width: 100%; 
     height: 285px;
+    
 }
 .tenproduct{
     text-align: center;
@@ -53,7 +69,8 @@ img{
 }
 .cuoitrang{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    width:60%;
 }
 
 .topnav {
@@ -89,7 +106,6 @@ img{
   max-width: 1000px;
   position: relative;
   margin:auto ;
- 
 }
 
 /* Hide the images by default */
