@@ -10,8 +10,8 @@
     font-weight: bold;
 }
 .khunggopy{
- padding:0 16px 0 16px;
  width:100%;
+ color:white;
 }
 .noidungkhunggopy{
   border: none ;
@@ -19,7 +19,8 @@
   display: flex;
  justify-content: space-between;
  flex-direction: column;
- width:100%
+ width:100%;
+ background-color: transparent
 }
 
 .hinh{
@@ -47,7 +48,7 @@
     
 }
 #grad1 {
-  background-image: linear-gradient(to right, #333333 , grey )
+  background-image: linear-gradient(to right, #4d96de , #c82a84, #f76b12 )
 }
 .content{
     display:flex;
@@ -67,10 +68,11 @@ img{
     font-size: 20px;
     color:black
 }
+
 .cuoitrang{
     display: flex;
     justify-content: space-around;
-    width:60%;
+    width: 100%;
 }
 
 .topnav {
@@ -80,7 +82,18 @@ img{
  body{
     background: url(https://www.solidbackgrounds.com/images/website/950x534/950x534-blue-abstract-noise-free-website-background-image.jpg)
   }
- 
+ input{
+   text-decoration: none;
+   border-bottom:white solid 1px;
+   border:0;
+   padding-top:10px;
+   background-color: transparent;
+   width: 100%;
+ }
+ ::placeholder{
+   color:white;
+   border-bottom: white solid 1px;
+ }
   .topnav a {
     float: left;
     color: #f2f2f2;
@@ -88,6 +101,12 @@ img{
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+  }
+  .chugopy{
+    color:white;
+    width: 30%;
+    padding-top:5px;
+    padding-right: 5px;
   }
   
   .topnav a:hover {
