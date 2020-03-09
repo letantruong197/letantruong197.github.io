@@ -39,7 +39,7 @@
     justify-content: center;
 }
 .khunghinh{
-    border: white solid 4px;
+    border: black solid 4px;
     width: 25%;
     border-radius: 10px;
     margin: 25px;
@@ -76,12 +76,10 @@ img{
 }
 
 .topnav {
-    background-color: rgba(40, 40, 40, 0.98);
+    background-color: rgba(40, 40, 40, 0.89);
     overflow: hidden;
   }
- body{
-    background: url(https://www.solidbackgrounds.com/images/website/950x534/950x534-blue-abstract-noise-free-website-background-image.jpg)
-  }
+
  input{
    text-decoration: none;
    border-bottom:white solid 1px;
@@ -140,7 +138,7 @@ img{
   width: auto;
   margin-top: -22px;
   padding: 20px;
-  color: white;
+  color: #303030;
   font-weight: bold;
   font-size: 20px;
   transition: 0.6s ease;
