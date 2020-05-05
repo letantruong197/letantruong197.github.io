@@ -68,7 +68,6 @@ img{
     font-size: 20px;
     color:black
 }
-
 .cuoitrang{
     display: flex;
     justify-content: space-around;
@@ -79,7 +78,9 @@ img{
     background-color: rgba(40, 40, 40, 0.89);
     overflow: hidden;
   }
-
+body{
+  background-image: url(download\ \(1\).jpg);
+}
  input{
    text-decoration: none;
    border-bottom:white solid 1px;
