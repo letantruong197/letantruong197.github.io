@@ -22,10 +22,20 @@
  width:100%;
  background-color: transparent
 }
-
+.chieucaohinh{
+  height: 345px;}
 .hinh{
     width:100%;
-    
+}
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
 }
 .toankhunggopy{
   padding-left:15px;
@@ -39,13 +49,9 @@
     justify-content: center;
 }
 .khunghinh{
-    border: black solid 4px;
+    border: 4px;
     width: 25%;
-    border-radius: 10px;
     margin: 25px;
-    padding: 10px;
-    background-color: white;
-    
 }
 #grad1 {
   background-image: linear-gradient(to right, #4d96de , #c82a84, #f76b12 )
@@ -61,6 +67,15 @@ img{
     width: 100%; 
     height: 285px;
     
+}
+ 
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: 345px;
+  transition: .5s ease;
+  backface-visibility: hidden;
 }
 .tenproduct{
     text-align: center;
@@ -89,10 +104,23 @@ body{
    background-color: transparent;
    width: 100%;
  }
+ .container {
+  position: relative;
+  width: 100%;
+}
  ::placeholder{
    color:white;
    border-bottom: white solid 1px;
  }
+  
+ .container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
   .topnav a {
     float: left;
     color: white;

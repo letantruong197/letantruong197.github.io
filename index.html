@@ -8,6 +8,37 @@
     <link href="./style web banh trang.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .container {
+          position: relative;
+          width: 100%;
+        }
+        .middle {
+          transition: .5s ease;
+          opacity: 0;
+          position: relative;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          text-align: center;
+        }
+        
+        .container:hover .image {
+          opacity: 0.3;
+        }
+        
+        .container:hover .middle {
+          opacity: 1;
+        }
+        
+        .text {
+          color: black;
+          font-size: 16px;
+          padding: 16px 32px;
+          margin-bottom: 4cm
+        }
+        </style>
 </head>
 <body>
     
@@ -56,152 +87,209 @@
     <span class="dot" onclick="currentSlide(4)"></span>
   </div>
     <div class="content">
-
         <div class="khunghinh">
-            <div class="hinh">
-                <img src="https://cf.shopee.vn/file/14e5763f4a40c29a7452e2e4d0d95760" alt="Bánh tráng cuộn tôm hành">
-                <div class="tenproduct">Bánh tráng cuộn tôm hành</div>
-                <div class="mua">
-                    <p style="border:black solid 1px; padding: 1px;align-self:center;">50.000VNĐ</p>
-                    <p style="padding:5px;font-weight: bold;">Mua</p>
-                </div>
-            </div>
-        </div>
-    
-        <div class="khunghinh">
+            <div class="container">
                 <div class="hinh">
-                    <img src="https://vn-live-01.slatic.net/original/4c83e7fa67d88e68bc04f1a671d15d24.jpg" alt="Bánh tráng bơ">
-                    <div class="tenproduct">Bánh tráng bơ</div>
-                    <div class="mua">
-                        <p style="border:black solid 1px; padding: 1px;align-self:center;">50.000VNĐ</p>
-                        <p style="padding:5px;font-weight: bold;">Mua</p>
-
+                    <div class="chieucaohinh"><img class="image" src="https://cf.shopee.vn/file/14e5763f4a40c29a7452e2e4d0d95760" alt="Ngũ cốc tăng cơ"></div>
+                    <div class="tenproduct">Bánh tráng cuộn tôm hành</div>
+                    <div class="middle">
+                        <div class="text">Bánh tráng cuộn tôm hành cực ngon cho những ngày ăn vặt
+                            Thành phần: Bánh tráng, tôm, hành
                         </div>
-                    </div>
-            </div> 
-            <div class="khunghinh">
-                    <div class="hinh">
-                    <img src="https://media3.scdn.vn/img2/2018/8_16/lo2UKU_simg_b5529c_250x250_maxb.jpg" alt="Bánh tráng sa tế">
-                    <div class="tenproduct">Bánh tráng sa tế</div>
-                    <div class="mua">
-                    
-                    <p style="border:black solid 1px; padding: 1px;align-self:center;">50.000VNĐ</p>
-                    <p style="padding:5px;font-weight: bold;">Mua</p>
-                    
-                    </div>
-                </div>
-            </div>
-            <div class="khunghinh">
-                    <div class="hinh">
-                    <img src="https://cf.shopee.vn/file/9953682a097a8db2a724392ba8faff97" alt="Bánh tráng tắc">
-                    <div class="tenproduct">Bánh tráng tắc</div>
-                    <div class="mua">
-                    
-                    <p style="border:black solid 1px; padding: 1px;align-self:center;">50.000VNĐ</p>
-                    <p style="padding:5px;font-weight: bold;">Mua</p>
-                    
-                    </div>
-                </div>
-            </div>
-            <div class="khunghinh">
-                        <div class="hinh">
-                        <img src="https://cf.shopee.vn/file/0ad77ddc5c2e1043b67dccb86ea9017d" alt="Bánh tráng tép">
-                        <div class="tenproduct">Bánh tráng tép cuộn</div>
-                        <div class="mua">
-                        
-                        <p style="border:black solid 1px; padding: 1px;align-self:center;">50.000VNĐ</p>
-                        <p style="padding:5px;font-weight: bold;">Mua</p>
-                        
                         </div>
-                    </div>
-                </div>
-            <div class="khunghinh">
-                        <div class="hinh">
-                        <img src="http://banhtrangroti.com/kcfinder/upload/images/sate-tron-tac.jpg" alt="Bánh tráng muối ớt">
-                        <div class="tenproduct">Bánh tráng muối ớt Tây Ninh</div>
-                        <div class="mua">
-                        
-                        <p style="border:black solid 1px; padding: 1px;align-self:center;">50.000VNĐ</p>
-                        <p style="padding:5px;font-weight: bold;">Mua</p>
-                        
-                        </div>
-                    </div>
-                </div>
-            <div class="khunghinh">
-                          <div class="hinh">
-                          <img src="https://www.cet.edu.vn/wp-content/uploads/2018/03/cach-lam-banh-trang-tron.jpg" alt="Bánh tráng trộn">
-                          <div class="tenproduct">Bánh tráng trộn</div>
-                          <div class="mua">
-                          
-                          <p style="border:black solid 1px; padding: 1px;align-self:center;">50.000VNĐ</p>
-                          <p style="padding:5px;font-weight: bold;">Mua</p>
-                          
-                          </div>
-                      </div>
-                  </div>
-            <div class="khunghinh">
-                          <div class="hinh">
-                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHCH1yMrMVpVT_fC6KrLkZbzRKLT1Dih9ZL76i8fHMfNSNLvILRQ&s" alt="Bánh tráng me">
-                          <div class="tenproduct">Bánh tráng me</div>
-                          <div class="mua">
-                          
-                          <p style="border:black solid 1px; padding: 1px;align-self:center;">50.000VNĐ</p>
-                          <p style="padding:5px;font-weight: bold;">Mua</p>
-                          
-                          </div>
-                      </div>
-                  </div>
-            <div class="khunghinh">
-                          <div class="hinh">
-                          <img src="https://i.ytimg.com/vi/vzIUb5F4TMo/maxresdefault.jpg" alt="Bánh tráng nướng">
-                          <div class="tenproduct">Bánh tráng nướng</div>
-                          <div class="mua">
-                          
-                          <p style="border:black solid 1px; padding: 1px;align-self:center;">50.000VNĐ</p>
-                          <p style="padding:5px;font-weight: bold;">Mua</p>
-                          
-                          </div>
-                      </div>
-                  </div>
-            <div class="khunghinh">
-                      <div class="hinh">
-                      <img src="https://cf.shopee.vn/file/c1c53fb59dc55b45178de354fdb407d1" alt="Bánh tráng phơi sương">
-                      <div class="tenproduct">Bánh tráng phơi sương hành phi muối</div>
-                      <div class="mua">
-                      
-                      <p style="border:black solid 1px; padding: 1px;align-self:center;">50.000VNĐ</p>
-                      <p style="padding:5px;font-weight: bold;">Mua</p>
-                      
-                      </div>
-                  </div>
-            </div>
-            <div class="khunghinh">
-                      <div class="hinh">
-                      <img src="https://cf.shopee.vn/file/54a423aec42c54e9f1c2e1d954a23445" alt="Bánh tráng phô mai">
-                      <div class="tenproduct">Bánh tráng lắc phô mai</div>
-                      <div class="mua">
-                      
-                      <p style="border:black solid 1px; padding: 1px;align-self:center;">50.000VNĐ</p>
-                      <p style="padding:5px;font-weight: bold;">Mua</p>
-                      
-                      </div>
-                  </div>
-            </div>
-            <div class="khunghinh">
-                    <div class="hinh">
-                    <img src="https://images.foody.vn/res/g79/785107/s/2018108155158-banh-trang-matcha.jpg" alt="Bánh tráng matcha">
-                    <div class="tenproduct">Bánh tráng matcha</div>
                     <div class="mua">
-                    
                         <p style="border:black solid 1px; padding: 1px;align-self:center;">50.000VNĐ</p>
                         <p style="padding:5px;font-weight: bold;">Mua</p>
-                        
                     </div>
                 </div>
             </div>
-            
         </div>
-        
+        <div class="khunghinh">
+            <div class="container">
+                <div class="hinh">
+                    <div class="chieucaohinh"><img class="image"  src="https://vn-live-01.slatic.net/original/4c83e7fa67d88e68bc04f1a671d15d24.jpg" alt="Ngũ cốc tăng cơ"></div>
+                    <div class="tenproduct">Bánh tráng bơ</div>
+                    <div class="middle">
+                        <div class="text">Bánh tráng bơ béo ngậy cực ngon
+                            Thành phần: Bánh tráng, bơ, tép, hành phi
+                        </div>
+                        </div>
+                    <div class="mua">
+                        <p style="border:black solid 1px; padding: 1px;align-self:center;">50.000VNĐ</p>
+                        <p style="padding:5px;font-weight: bold;">Mua</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="khunghinh">
+            <div class="container">
+                <div class="hinh">
+                   <div class="chieucaohinh"><img style="padding-top: 14%;" class="image" src="https://media3.scdn.vn/img2/2018/8_16/lo2UKU_simg_b5529c_250x250_maxb.jpg" alt="Bánh tráng sa tế"></div>
+                    <div class="tenproduct">Bánh tráng sa tế</div>
+                    <div class="middle">
+                        <div class="text">Bánh tráng sa tế siêu cay
+                            Thành phần: Bánh tráng, sa tế
+                        </div>
+                        </div>
+                    <div class="mua">
+                        <p style="border:black solid 1px; padding: 1px;align-self:center;">50.000VNĐ</p>
+                        <p style="padding:5px;font-weight: bold;">Mua</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="khunghinh">
+            <div class="container">
+                <div class="hinh">
+                   <div class="chieucaohinh"><img style="padding-top: 14%;" class="image"  src="https://cf.shopee.vn/file/9953682a097a8db2a724392ba8faff97" alt="Bánh tráng tắc"></div>
+                    <div class="tenproduct">Bánh tráng tắc</div>
+                    <div class="middle">
+                        <div class="text">Bánh tráng tắc chua chua của sự thanh mát và tươi mới
+                            Thành phần: Bánh tráng, tắc
+                        </div>
+                        </div>
+                    <div class="mua">
+                        <p style="border:black solid 1px; padding: 1px;align-self:center;">50.000VNĐ</p>
+                        <p style="padding:5px;font-weight: bold;">Mua</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="khunghinh">
+            <div class="container">
+                <div class="hinh">
+                   <div class="chieucaohinh"><img style="padding-top: 14%;" class="image" src="https://cf.shopee.vn/file/0ad77ddc5c2e1043b67dccb86ea9017d" alt="Bánh tráng tép"></div>
+                    <div class="tenproduct">Bánh tráng tép</div>
+                    <div class="middle">
+                        <div class="text">Bánh tráng tép ngọt ngọt của tép, cảm nhận được cái sự tươi mới
+                            Thành phần: Bánh tráng, tép
+                        </div>
+                        </div>
+                    <div class="mua">
+                        <p style="border:black solid 1px; padding: 1px;align-self:center;">50.000VNĐ</p>
+                        <p style="padding:5px;font-weight: bold;">Mua</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="khunghinh">
+            <div class="container">
+                <div class="hinh">
+                   <div class="chieucaohinh"><img style="padding-top: 14%;" class="image" src="http://banhtrangroti.com/kcfinder/upload/images/sate-tron-tac.jpg" alt="Bánh tráng muối ớt"></div>
+                    <div class="tenproduct">Bánh tráng muối ớt</div>
+                    <div class="middle">
+                        <div class="text">Bánh tráng muối ớt mặn mà kết hợp với cái vị cay cay của ớt
+                            Thành phần: Bánh tráng, muối ớt
+                        </div>
+                        </div>
+                    <div class="mua">
+                        <p style="border:black solid 1px; padding: 1px;align-self:center;">50.000VNĐ</p>
+                        <p style="padding:5px;font-weight: bold;">Mua</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="khunghinh">
+            <div class="container">
+                <div class="hinh">
+                   <div class="chieucaohinh"><img style="padding-top: 14%;" class="image" src="https://www.cet.edu.vn/wp-content/uploads/2018/03/cach-lam-banh-trang-tron.jpg" alt="Bánh tráng trộn"></div>
+                    <div class="tenproduct">Bánh tráng trộn </div>
+                    <div class="middle">
+                        <div class="text">Bánh tráng trộn, nơi tập hợp của những sự tinh khiết và ngon miệng
+                        </div>
+                        </div>
+                    <div class="mua">
+                        <p style="border:black solid 1px; padding: 1px;align-self:center;">50.000VNĐ</p>
+                        <p style="padding:5px;font-weight: bold;">Mua</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="khunghinh">
+            <div class="container">
+                <div class="hinh">
+                   <div class="chieucaohinh"><img style="padding-top: 14%;" class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHCH1yMrMVpVT_fC6KrLkZbzRKLT1Dih9ZL76i8fHMfNSNLvILRQ&s" alt="Bánh tráng me"></div>
+                    <div class="tenproduct">Bánh tráng me</div>
+                    <div class="middle">
+                        <div class="text">Bánh tráng me chua thanh thuần khiết của me khiến cho bạn mê mệt
+                            Thành phần: Bánh tráng, me
+                        </div>
+                        </div>
+                    <div class="mua">
+                        <p style="border:black solid 1px; padding: 1px;align-self:center;">50.000VNĐ</p>
+                        <p style="padding:5px;font-weight: bold;">Mua</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="khunghinh">
+            <div class="container">
+                <div class="hinh">
+                   <div class="chieucaohinh"><img style="padding-top: 14%;" class="image" src="https://i.ytimg.com/vi/vzIUb5F4TMo/maxresdefault.jpg" alt="Bánh tráng nướng"></div>
+                    <div class="tenproduct">Bánh tráng nướng</div>
+                    <div class="middle">
+                        <div style="margin-bottom:2cm"class="text">Bánh tráng nướng giòn rụm kết hợp với sự tươi ngon của trứng cút,tép và bơ kèm sốt đặc biệt cho ta một cảm giác của thiêng đường
+                            Thành phần: Bánh tráng, trứng cút, tép, bơ, sốt đặc biệt
+                        </div>
+                        </div>
+                    <div class="mua">
+                        <p style="border:black solid 1px; padding: 1px;align-self:center;">50.000VNĐ</p>
+                        <p style="padding:5px;font-weight: bold;">Mua</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="khunghinh">
+            <div class="container">
+                <div class="hinh">
+                   <div class="chieucaohinh"><img style="padding-top: 14%;" class="image"  src="https://cf.shopee.vn/file/c1c53fb59dc55b45178de354fdb407d1" alt="Bánh tráng phơi sương"></div>
+                    <div class="tenproduct">Bánh tráng phơi sương hành phi</div>
+                    <div class="middle">
+                        <div class="text">Bánh tráng mát lạnh cùng với hành phi là món phù hợp cho ngày mùa hè nóng
+                            Thành phần: Bánh tráng, hành phi 
+                        </div>
+                        </div>
+                    <div class="mua">
+                        <p style="border:black solid 1px; padding: 1px;align-self:center;">50.000VNĐ</p>
+                        <p style="padding:5px;font-weight: bold;">Mua</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="khunghinh">
+            <div class="container">
+                <div class="hinh">
+                   <div class="chieucaohinh"><img style="padding-top: 14%;" class="image"  src="https://cf.shopee.vn/file/54a423aec42c54e9f1c2e1d954a23445" alt="Bánh tráng phô mai"></div>
+                    <div class="tenproduct">Bánh tráng phô mai</div>
+                    <div class="middle">
+                        <div class="text">Bánh tráng phô mai béo ngậy, ngọt ngọt gây nghiện đến tuyệt ảo bởi sự ngon béo ngậy.
+                            Thành phần: Bánh tráng, phô mai
+                        </div>
+                        </div>
+                    <div class="mua">
+                        <p style="border:black solid 1px; padding: 1px;align-self:center;">50.000VNĐ</p>
+                        <p style="padding:5px;font-weight: bold;">Mua</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="khunghinh">
+            <div class="container">
+                <div class="hinh">
+                   <div class="chieucaohinh"><img style="padding-top: 14%;" class="image"  src="https://images.foody.vn/res/g79/785107/s/2018108155158-banh-trang-matcha.jpg" alt="Bánh tráng matcha"></div>
+                    <div class="tenproduct">Bánh tráng matcha</div>
+                    <div class="middle">
+                        <div class="text">Bánh tráng matcha sự kết hợp tinh hoa của Việt và Nhật béo ngậy không tưởng !
+                            Thành phần: Bánh tráng, matcha, sữa
+                        </div>
+                        </div>
+                    <div class="mua">
+                        <p style="border:black solid 1px; padding: 1px;align-self:center;">50.000VNĐ</p>
+                        <p style="padding:5px;font-weight: bold;">Mua</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <footer style="font-size: 20px">
         <div id="grad1">
