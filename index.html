@@ -4,392 +4,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Bánh Tráng TND</title>
-    <link href="./style web banh trang.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <style>
-        .container {
-            position: relative;
-            width: 100%;
-        }
-
-        .middle {
-            transition: .5s ease;
-            opacity: 0;
-            position: relative;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            text-align: center;
-        }
-
-        .container:hover .image {
-            opacity: 0.3;
-        }
-
-        .container:hover .middle {
-            opacity: 1;
-        }
-
-        .text {
-            color: black;
-            font-size: 16px;
-            padding: 16px 32px;
-            margin-bottom: 4cm
-        }
-    </style>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <title>Save The Earth</title>
 </head>
 
 <body>
+    <div class="container">
+        <div class="header">
+            <div class="header__nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="https://letantruong197.github.io/sanphamkhac.github.io/">Problems</a></li>
+                    <li><a href="#contact">About Us</a></li>
+                    <li><a href="#about">Something more interesting</a></li>
+                    <li class="sign-in">
+                        <a href="">Sign in</a>
+                        <div class="login-form">
+                            <input class="input__text" type="text" placeholder="Username">
+                            <input class="input__text" type="text" placeholder="Password">
+                            <button class="login-button btn">Login</button>
+                            <button class="login-signup btn">Sign Up</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="header-intro__img">
+                <div class="header-intro-blur-img"></div>
+                <div class="header-intro_img--text">
+                    <h1>Welcome to our website.
+                        The spirit of the environment
+                    </h1>
+                </div>
+            </div>
 
-    <div class="topnav">
-        <a class="active" href="#home">Home</a>
-        <a href="https://letantruong197.github.io/sanphamkhac.github.io/">Các sản phẩm khác</a>
-        <a href="#contact">Khuyến mãi</a>
-        <a href="#about">Liên hệ</a>
+            <div class="body">
+                <div class="body-content-environment">
+                    <div data-aos="fade-up" class="body-content-environment__text">
+                        <h1>ENVIRONMENT</h1>
+                    </div>
+                    <div class="body-content-environment-content">
+                        <div class="body-content-environment-jungle">
+                            <div data-aos="fade-down" class="body-content-environment-jungle-title">Jungle</div>
+                            <div data-aos="fade-down" class="body-content-environment-jungle-content">
+                                <div class="body-content-environment-jungle-content--img">
+                                    <img src="./img/web_23516_349343.jpg" width="100%" height="100%">
+                                </div>
+                                <div class="body-content-environment-jungle-content__text">
+                                    Jungles and trees provide us an enormous amount of oxygen around the world every
+                                    day.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="body-content-environment-air">
+                            <div data-aos="fade-down" class="body-content-environment-air-title">Air</div>
+                            <div data-aos="fade-down" class="body-content-environment-air-content">
+                                <div class="body-content-environment-air-content--img">
+                                    <img src="./img/air.jpg" width="100%" height="100%">
+                                </div>
+                                <div class="body-content-environment-air-content--text">
+                                    Oxygen, thing gives life to creatures. The "food" for our body and mind, the "food"
+                                    for
+                                    plants, millions of animals, and more.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="body-content-problems">
+                    <div class="body-content-problems-content">
+                        <div data-aos="fade-up" class="body-content-problems-content__text">
+                            <h1>PROBLEMS</h1>
+                            <p>Problems we are facing like an unlimited alarm, keep ringing until be solved by us. </p>
+                            <p>1. Air pollution and climate change.</p>
+                            <p>2. Deforestation.</p>
+                            <p>3. Species extinction.</p>
+                            <p>4. Soil degradation.</p>
+                            <p>5. Overpopulation.</p>
+                            <p>And more ...</p>
+                        </div>
+                        <div data-aos="fade-up" class="body-content-problems-content__video">
+                            <iframe width="700" height="507" src="https://www.youtube.com/embed/G4H1N_yXBiA"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;autocc"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <main>
-        <!-- Slideshow container -->
-        <div class="slideshow-container">
-
-            <!-- Full-width images with number and caption text -->
-            <div class="mySlides fade">
-                <img src="http://bizweb.dktcdn.net/thumb/grande/100/318/244/articles/slider.jpg?v=1555943582247"
-                    style="width:100%;height:500px;">
-
-            </div>
-
-            <div class="mySlides fade">
-                <img src="https://www.converse.com.vn/pictures/catalog/news/promotion/1200x627-Facebookmessads.jpg"
-                    style="width:100%;height:500px">
-
-            </div>
-
-            <div class="mySlides fade">
-                <img src="https://www.megasun.com.vn/v2/wp-content/uploads/2019/02/HVNCLC2019.png"
-                    style="width:100%;height:500px;">
-
-            </div>
-            <div class="mySlides fade">
-                <img src="https://linhhandmade.com/assets/post/5b71ac781a93b-13-08-2018.39068341_434271643646069_8156772520129724416_n.png"
-                    style="width:100%;height:500px;">
-
-            </div>
-
-            <!-- Next and previous buttons -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-        <br>
-
-        <!-- The dots/circles -->
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-        </div>
-        <div class="content">
-            <div class="khunghinh">
-                <div class="container">
-                    <div class="hinh">
-                        <div class="chieucaohinh"><img class="image"
-                                src="https://cf.shopee.vn/file/14e5763f4a40c29a7452e2e4d0d95760" alt="Ngũ cốc tăng cơ">
-                        </div>
-                        <div class="tenproduct">Bánh tráng cuộn tôm hành</div>
-                        <div class="middle">
-                            <div class="text">Bánh tráng cuộn tôm hành cực ngon cho những ngày ăn vặt
-                                Thành phần: Bánh tráng, tôm, hành
-                            </div>
-                        </div>
-                        <div class="mua">
-                            <p style="border:black solid 1px; padding: 1px;align-self:center;">50.000VNĐ</p>
-                            <p style="padding:5px;font-weight: bold;">Mua</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="khunghinh">
-                <div class="container">
-                    <div class="hinh">
-                        <div class="chieucaohinh"><img class="image"
-                                src="https://vn-live-01.slatic.net/original/4c83e7fa67d88e68bc04f1a671d15d24.jpg"
-                                alt="Ngũ cốc tăng cơ"></div>
-                        <div class="tenproduct">Bánh tráng bơ</div>
-                        <div class="middle">
-                            <div class="text">Bánh tráng bơ béo ngậy cực ngon
-                                Thành phần: Bánh tráng, bơ, tép, hành phi
-                            </div>
-                        </div>
-                        <div class="mua">
-                            <p style="border:black solid 1px; padding: 1px;align-self:center;">50.000VNĐ</p>
-                            <p style="padding:5px;font-weight: bold;">Mua</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="khunghinh">
-                <div class="container">
-                    <div class="hinh">
-                        <div class="chieucaohinh"><img style="padding-top: 14%;" class="image"
-                                src="https://media3.scdn.vn/img2/2018/8_16/lo2UKU_simg_b5529c_250x250_maxb.jpg"
-                                alt="Bánh tráng sa tế"></div>
-                        <div class="tenproduct">Bánh tráng sa tế</div>
-                        <div class="middle">
-                            <div class="text">Bánh tráng sa tế siêu cay
-                                Thành phần: Bánh tráng, sa tế
-                            </div>
-                        </div>
-                        <div class="mua">
-                            <p style="border:black solid 1px; padding: 1px;align-self:center;">50.000VNĐ</p>
-                            <p style="padding:5px;font-weight: bold;">Mua</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="khunghinh">
-                <div class="container">
-                    <div class="hinh">
-                        <div class="chieucaohinh"><img style="padding-top: 14%;" class="image"
-                                src="https://cf.shopee.vn/file/9953682a097a8db2a724392ba8faff97" alt="Bánh tráng tắc">
-                        </div>
-                        <div class="tenproduct">Bánh tráng tắc</div>
-                        <div class="middle">
-                            <div class="text">Bánh tráng tắc chua chua của sự thanh mát và tươi mới
-                                Thành phần: Bánh tráng, tắc
-                            </div>
-                        </div>
-                        <div class="mua">
-                            <p style="border:black solid 1px; padding: 1px;align-self:center;">50.000VNĐ</p>
-                            <p style="padding:5px;font-weight: bold;">Mua</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="khunghinh">
-                <div class="container">
-                    <div class="hinh">
-                        <div class="chieucaohinh"><img style="padding-top: 14%;" class="image"
-                                src="https://cf.shopee.vn/file/0ad77ddc5c2e1043b67dccb86ea9017d" alt="Bánh tráng tép">
-                        </div>
-                        <div class="tenproduct">Bánh tráng tép</div>
-                        <div class="middle">
-                            <div class="text">Bánh tráng tép ngọt ngọt của tép, cảm nhận được cái sự tươi mới
-                                Thành phần: Bánh tráng, tép
-                            </div>
-                        </div>
-                        <div class="mua">
-                            <p style="border:black solid 1px; padding: 1px;align-self:center;">50.000VNĐ</p>
-                            <p style="padding:5px;font-weight: bold;">Mua</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="khunghinh">
-                <div class="container">
-                    <div class="hinh">
-                        <div class="chieucaohinh"><img style="padding-top: 14%;" class="image"
-                                src="http://banhtrangroti.com/kcfinder/upload/images/sate-tron-tac.jpg"
-                                alt="Bánh tráng muối ớt"></div>
-                        <div class="tenproduct">Bánh tráng muối ớt</div>
-                        <div class="middle">
-                            <div class="text">Bánh tráng muối ớt mặn mà kết hợp với cái vị cay cay của ớt
-                                Thành phần: Bánh tráng, muối ớt
-                            </div>
-                        </div>
-                        <div class="mua">
-                            <p style="border:black solid 1px; padding: 1px;align-self:center;">50.000VNĐ</p>
-                            <p style="padding:5px;font-weight: bold;">Mua</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="khunghinh">
-                <div class="container">
-                    <div class="hinh">
-                        <div class="chieucaohinh"><img style="padding-top: 14%;" class="image"
-                                src="https://www.cet.edu.vn/wp-content/uploads/2018/03/cach-lam-banh-trang-tron.jpg"
-                                alt="Bánh tráng trộn"></div>
-                        <div class="tenproduct">Bánh tráng trộn </div>
-                        <div class="middle">
-                            <div class="text">Bánh tráng trộn, nơi tập hợp của những sự tinh khiết và ngon miệng
-                            </div>
-                        </div>
-                        <div class="mua">
-                            <p style="border:black solid 1px; padding: 1px;align-self:center;">50.000VNĐ</p>
-                            <p style="padding:5px;font-weight: bold;">Mua</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="khunghinh">
-                <div class="container">
-                    <div class="hinh">
-                        <div class="chieucaohinh"><img style="padding-top: 14%;" class="image"
-                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHCH1yMrMVpVT_fC6KrLkZbzRKLT1Dih9ZL76i8fHMfNSNLvILRQ&s"
-                                alt="Bánh tráng me"></div>
-                        <div class="tenproduct">Bánh tráng me</div>
-                        <div class="middle">
-                            <div class="text">Bánh tráng me chua thanh thuần khiết của me khiến cho bạn mê mệt
-                                Thành phần: Bánh tráng, me
-                            </div>
-                        </div>
-                        <div class="mua">
-                            <p style="border:black solid 1px; padding: 1px;align-self:center;">50.000VNĐ</p>
-                            <p style="padding:5px;font-weight: bold;">Mua</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="khunghinh">
-                <div class="container">
-                    <div class="hinh">
-                        <div class="chieucaohinh"><img style="padding-top: 14%;" class="image"
-                                src="https://i.ytimg.com/vi/vzIUb5F4TMo/maxresdefault.jpg" alt="Bánh tráng nướng"></div>
-                        <div class="tenproduct">Bánh tráng nướng</div>
-                        <div class="middle">
-                            <div style="margin-bottom:2cm" class="text">Bánh tráng nướng giòn rụm kết hợp với sự tươi
-                                ngon của trứng cút,tép và bơ kèm sốt đặc biệt cho ta một cảm giác của thiêng đường
-                                Thành phần: Bánh tráng, trứng cút, tép, bơ, sốt đặc biệt
-                            </div>
-                        </div>
-                        <div class="mua">
-                            <p style="border:black solid 1px; padding: 1px;align-self:center;">50.000VNĐ</p>
-                            <p style="padding:5px;font-weight: bold;">Mua</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="khunghinh">
-                <div class="container">
-                    <div class="hinh">
-                        <div class="chieucaohinh"><img style="padding-top: 14%;" class="image"
-                                src="https://cf.shopee.vn/file/c1c53fb59dc55b45178de354fdb407d1"
-                                alt="Bánh tráng phơi sương"></div>
-                        <div class="tenproduct">Bánh tráng phơi sương hành phi</div>
-                        <div class="middle">
-                            <div class="text">Bánh tráng mát lạnh cùng với hành phi là món phù hợp cho ngày mùa hè nóng
-                                Thành phần: Bánh tráng, hành phi
-                            </div>
-                        </div>
-                        <div class="mua">
-                            <p style="border:black solid 1px; padding: 1px;align-self:center;">50.000VNĐ</p>
-                            <p style="padding:5px;font-weight: bold;">Mua</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="khunghinh">
-                <div class="container">
-                    <div class="hinh">
-                        <div class="chieucaohinh"><img style="padding-top: 14%;" class="image"
-                                src="https://cf.shopee.vn/file/54a423aec42c54e9f1c2e1d954a23445"
-                                alt="Bánh tráng phô mai"></div>
-                        <div class="tenproduct">Bánh tráng phô mai</div>
-                        <div class="middle">
-                            <div class="text">Bánh tráng phô mai béo ngậy, ngọt ngọt gây nghiện đến tuyệt ảo bởi sự ngon
-                                béo ngậy.
-                                Thành phần: Bánh tráng, phô mai
-                            </div>
-                        </div>
-                        <div class="mua">
-                            <p style="border:black solid 1px; padding: 1px;align-self:center;">50.000VNĐ</p>
-                            <p style="padding:5px;font-weight: bold;">Mua</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="khunghinh">
-                <div class="container">
-                    <div class="hinh">
-                        <div class="chieucaohinh"><img style="padding-top: 14%;" class="image"
-                                src="https://images.foody.vn/res/g79/785107/s/2018108155158-banh-trang-matcha.jpg"
-                                alt="Bánh tráng matcha"></div>
-                        <div class="tenproduct">Bánh tráng matcha</div>
-                        <div class="middle">
-                            <div class="text">Bánh tráng matcha sự kết hợp tinh hoa của Việt và Nhật béo ngậy không
-                                tưởng !
-                                Thành phần: Bánh tráng, matcha, sữa
-                            </div>
-                        </div>
-                        <div class="mua">
-                            <p style="border:black solid 1px; padding: 1px;align-self:center;">50.000VNĐ</p>
-                            <p style="padding:5px;font-weight: bold;">Mua</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </main>
-    <footer style="font-size: 20px">
-        <div id="grad1">
-            <div class="cuoitrang">
-                <div style="padding-left: 5px;padding-top:5px;padding-right:20px;width:30%">
-                    <p style="text-align: center;border-bottom:white solid 4px;color: white;">Liên Hệ</p>
-                    <p style="color:white;margin-bottom:10px">banhtrangngoctruong@gmail.com</p>
-                    <p style="color:white;margin-top: -2px;margin-bottom:10px">0931737030</p>
-                    <span><a href="https://www.youtube.com/channel/UCnNuLG65BfMtZMcFA97dDdA" target="_blank"><i
-                                class="fa fa-youtube-play" style="font-size:30px;color: white;"></i></a>&nbsp<a
-                            href="https://www.facebook.com/truong.tun.188" target="_blank"><i
-                                class="fa fa-facebook-square" style="font-size:30px;color: white;"></i></a>
-                </div>
-                <img style="width:35%;height: 16%;margin-top:30px"
-                    src="http://www.cslewisinstitute.org/webfm_send/2813">
-                <div class="chugopy">
-                    <p style="border-bottom:white solid 4px;text-align: center;margin-bottom: 10px;">Góp Ý</p>
-                    <input placeholder="Họ">
-                    <input placeholder="Tên">
-                    <input placeholder="Email">
-                </div>
-            </div>
-        </div>
-    </footer>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js">
+    </script>
     <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
-
-        // Next/previous controls
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        // Thumbnail image controls
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("dot");
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-        }
-        var slideIndex = 0;
-        carousel();
-
-        function carousel() {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > x.length) { slideIndex = 1 }
-            x[slideIndex - 1].style.display = "block";
-            setTimeout(carousel, 3000);
-        }
+        AOS.init();
     </script>
 </body>
 
