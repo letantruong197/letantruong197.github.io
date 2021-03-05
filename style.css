@@ -278,7 +278,7 @@ body {
     margin-top: 8px;
 }
 
-.sign-in {
+.sign-in, .signed-in {
     position: relative;
     float: right;
     margin-right: 30px;
@@ -327,4 +327,7 @@ body {
 
 .sign-in:hover .login-form {
     display: flex;
+}
+.signed-in:hover .login-form{
+    display: flex;  
 }

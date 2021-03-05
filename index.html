@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+    <link href="//fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
         rel="stylesheet">
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <title>Save The Earth</title>
@@ -26,13 +26,20 @@
                     <li class="sign-in">
                         <a href="">Sign in</a>
                         <div class="login-form">
-                            <input class="input__text" type="text" placeholder="Username">
-                            <input class="input__text" type="text" placeholder="Password">
+                            <input class="input__text" type="text" placeholder="Username" name="username">
+                            <input class="input__text" type="password" placeholder="Password" name="password">
                             <button class="login-button btn">Login</button>
                             <button class="login-signup btn">Sign Up</button>
                         </div>
                     </li>
+                    <li class="signed-in" style="display: none;">
+                        <a>Signed in</a>
+                        <div class="login-form">
+                            <button class="signout-button btn">Sign Out</button>
+                        </div>
+                    </li>
                 </ul>
+
             </div>
             <div class="header-intro__img">
                 <div class="header-intro-blur-img"></div>
@@ -104,6 +111,7 @@
     <script>
         AOS.init();
     </script>
+    <script src="/index.js"></script>
 </body>
 
 </html>
