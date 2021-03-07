@@ -49,7 +49,7 @@ loginbutton.addEventListener("click", function (event) {
         document.getElementsByClassName("sign-in")[0].style.display = "none"
         document.getElementsByClassName("signed-in")[0].style.display = "inline-block"
     } else
-        if (username == window.localStorage.getItem("username") && password == window.localStorage.getItem("password") && username !== "admin" && password !== "admin" && username !== "" && password !== "") {
+        if (username == window.localStorage.getItem("username") && password == window.localStorage.getItem("password")) {
             window.localStorage.setItem("loggedIn", true);
             alert(`Welcome back ${username} !`);
             document.getElementById("login-failed").style.display = "block";
