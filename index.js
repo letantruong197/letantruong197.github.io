@@ -38,11 +38,12 @@ loginbutton.addEventListener("click", function (event) {
         alert("You can't use that username !!!")
         window.localStorage.setItem("loggedIn", false);
         document.getElementById("login-failed").style.display = "block";
-    } else if (username == "" || password == "") {
-        alert("Please type your username or password !!!");
-        window.localStorage.setItem("loggedIn", false);
-        document.getElementById("login-failed").style.display = "block";
     }
+    // } else if (username == "" || password == "") {
+    //     alert("Please type your username or password !!!");
+    //     window.localStorage.setItem("loggedIn", false);
+    //     document.getElementById("login-failed").style.display = "block";
+    // }
     if (window.localStorage.getItem("loggedIn") == "true") {
         let signedIn = document.getElementsByClassName("signed-in")[0];
         console.log(signedIn);
@@ -56,7 +57,11 @@ loginbutton.addEventListener("click", function (event) {
             document.getElementById("login-failed").innerHTML = "Login Success";
             document.getElementById("login-failed").style.color = "green";
         }
-        else {
+        else if (username == "" || password == "") {
+            alert("Please type your username or password !!!");
+            window.localStorage.setItem("loggedIn", false);
+            document.getElementById("login-failed").style.display = "block";
+        } else {
             alert("Wrong username or password !!!");
             window.localStorage.setItem("loggedIn", false);
             document.getElementById("login-failed").style.display = "block";
