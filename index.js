@@ -39,15 +39,6 @@ signoutbutton.addEventListener("click", function (event) {
     document.getElementsByName("password")[0].value = "";
     document.getElementsByName("username")[0].value = "";
 })
-// function loginFailed() {
-//     if (window.localStorage.getItem("loggedIn") == "false" && window.localStorage.getItem("username") == "" && window.localStorage.getItem("password") == "" ) {
-//         document.getElementById("login-failed").style.display = "block";
-//     } else {
-//         document.getElementById("login-failed").style.display = "block";
-//         document.getElementById("login-failed").innerHTML = "Login Success";
-//         document.getElementById("login-failed").style.color = "green";
-//     }
-// }
 let airpollution__causes = document.getElementById("airpollution-causes")
 let airpollution__affect = document.getElementById("airpollution-affect")
 let airpollution__result = document.getElementById("airpollution-result")
