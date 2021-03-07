@@ -19,22 +19,25 @@
         <div class="header">
             <div class="header__nav">
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#contact">About Us</a></li>
-                    <li><a href="#about">Something more interesting</a></li>
-                    <li class="sign-in">
-                        <a href="">Sign in</a>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#contact">ABOUT US</a></li>
+                    <li><a href="#about">SOMETHING MORE INTERESTING</a></li>
+                    <li style="display: none;" class="sign-in">
+                        <a>Sign in</a>
                         <div class="login-form">
                             <input class="input__text" type="text" placeholder="Username" name="username">
                             <input class="input__text" type="password" placeholder="Password" name="password">
                             <p id="login-failed">Login Failed</p>
-                            <button onclick="loginFailed()" class="login-button btn">Login</button>
+                            <button onclick="loginFailed()" class="login-button btn">LOGIN</button>
                             <button class="login-signup btn">Sign Up</button>
                         </div>
                     </li>
-                    <li class="signed-in" style="display: none;">
-                        <a>Signed in</a>
+                    <li class="signed-in" style="display: inline-block;">
+                        <a>SIGNED IN</a>
                         <div class="login-form">
+                            <img style="background-image:none;" width="50%" height="50%"
+                                src="/User-Profile-PNG-Free-Download.png">
+                            <div id="profile-name"></div>
                             <button class="signout-button btn">Sign Out</button>
                         </div>
                     </li>
@@ -103,12 +106,12 @@
                         </div>
                     </div>
                 </div>
+                <div data-aos="fade-down" class="body-content-environment__text">
+                </div>
                 <div class="body-airpollution">
-                    <div data-aos="fade-down" class="body-content-environment__text">
-                        <h1>AIR POLLUTION</h1>
-                    </div>
                     <div data-aos="fade-up" class="body-airpollution-content">
                         <div data-aos="fade-up" class="body-airpollution-content-sections">
+                            <h1 style="font-weight: bold;">AIR POLLUTION</h1>
                             <div id="airpollution-causes">Causes</div>
                             <div id="airpollution-affect">Affect</div>
                             <div id="airpollution-result">Result</div>
@@ -122,6 +125,28 @@
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;autocc"
                                 allowfullscreen></iframe>
                         </div>
+                    </div>
+                </div>
+                <div class="body-content-climatechange">
+                    <div class="body-content-climatechange-content">
+                        <div data-aos="fade-up" class="body-content-climatechange-content__text">
+                            <h1 style="font-weight: bold;">CLIMATE CHANGE</h1>
+                            <div id="climatechange-causes">Causes</div>
+                            <div id="climatechange-affect">Affect</div>
+                            <div id="climatechange-result">Result</div>
+                            <div id="climatechange-solution">Solution</div>
+                        </div>
+                        <div data-aos="fade-up" class="body-content-climatechange-content__video">
+                            <iframe width="700" height="507" id="video-cm"
+                                src="https://www.youtube.com/embed/G4H1N_yXBiA" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;autocc"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="body-content-discussion">
+                    <h1>Discussion</h1>
+                    <div class="body-content-discussion-content">
                     </div>
                 </div>
             </div>
