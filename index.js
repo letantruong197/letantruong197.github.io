@@ -14,13 +14,18 @@ signinbutton.addEventListener("click", function (event) {
 loginbutton.addEventListener("click", function (event) {
     let username = document.getElementsByName("username")[0].value;
     let password = document.getElementsByName("password")[0].value;
-    if (username == window.localStorage.getItem("username") && password == window.localStorage.getItem("password")) {
+    if (username == window.localStorage.getItem("username") && password == window.localStorage.getItem("password")&& username !== "admin" && password !== "admin") {
         window.localStorage.setItem("loggedIn", true);
         alert(`Welcome back ${username} !`);
         document.getElementById("login-failed").style.display = "block";
         document.getElementById("login-failed").innerHTML = "Login Success";
         document.getElementById("login-failed").style.color = "green";
-    } else {
+    }else if(username == "admin" || username == "Admin" || password == "admin" || password == "Admin"){
+        alert("You can't use that username")
+        window.localStorage.setItem("loggedIn", false);
+        document.getElementById("login-failed").style.display = "block";
+    }else if(username == "" || password == ""){
+        alert("Please type your username or password");
         window.localStorage.setItem("loggedIn", false);
         document.getElementById("login-failed").style.display = "block";
     }
