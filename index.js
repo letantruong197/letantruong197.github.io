@@ -1,31 +1,45 @@
 let loginbutton = document.getElementsByClassName("login-button")[0];
 let signinbutton = document.getElementsByClassName("login-signup")[0];
 let signoutbutton = document.getElementsByClassName("signout-button")[0];
-
+window.localStorage.setItem("loggedIn", false)
 signinbutton.addEventListener("click", function (event) {
     let username = document.getElementsByName("username")[0].value;
     let password = document.getElementsByName("password")[0].value;
     console.log(username, password);
-    window.localStorage.setItem("username", username);
-    window.localStorage.setItem("password", password);
-    location.reload();
+    if (username == "" || password == "") {
+        alert("Please type your username or password to sign up !!!");
+        window.localStorage.setItem("loggedIn", false);
+        document.getElementById("login-failed").style.display = "block";
+        document.getElementById("login-failed").innerHTML = "SignUp Failed";
+    } else if (username == "admin" || username == "Admin" || password == "admin" || password == "Admin") {
+        alert("You can't use that username !!!")
+        window.localStorage.setItem("loggedIn", false);
+        document.getElementById("login-failed").style.display = "block";
+        document.getElementById("login-failed").innerHTML = "SignUp Failed";
+    } else if (username == window.localStorage.getItem("username")) {
+        window.localStorage.setItem("loggedIn", false);
+        alert("The username have been used !!!");
+        document.getElementById("login-failed").style.display = "block";
+        document.getElementById("login-failed").innerHTML = "SignUp Failed";
+    } else {
+        document.getElementById("login-failed").style.display = "block";
+        document.getElementById("login-failed").innerHTML = "Signup Success";
+        document.getElementById("login-failed").style.color = "green";
+        window.localStorage.setItem("username", username);
+        window.localStorage.setItem("password", password);
+        location.reload();
+    }
 })
 
 loginbutton.addEventListener("click", function (event) {
     let username = document.getElementsByName("username")[0].value;
     let password = document.getElementsByName("password")[0].value;
-    if (username == window.localStorage.getItem("username") && password == window.localStorage.getItem("password")&& username !== "admin" && password !== "admin") {
-        window.localStorage.setItem("loggedIn", true);
-        alert(`Welcome back ${username} !`);
-        document.getElementById("login-failed").style.display = "block";
-        document.getElementById("login-failed").innerHTML = "Login Success";
-        document.getElementById("login-failed").style.color = "green";
-    }else if(username == "admin" || username == "Admin" || password == "admin" || password == "Admin"){
-        alert("You can't use that username")
+    if (username == "admin" || username == "Admin" || password == "admin" || password == "Admin") {
+        alert("You can't use that username !!!")
         window.localStorage.setItem("loggedIn", false);
         document.getElementById("login-failed").style.display = "block";
-    }else if(username == "" || password == ""){
-        alert("Please type your username or password");
+    } else if (username == "" || password == "") {
+        alert("Please type your username or password !!!");
         window.localStorage.setItem("loggedIn", false);
         document.getElementById("login-failed").style.display = "block";
     }
@@ -34,7 +48,19 @@ loginbutton.addEventListener("click", function (event) {
         console.log(signedIn);
         document.getElementsByClassName("sign-in")[0].style.display = "none"
         document.getElementsByClassName("signed-in")[0].style.display = "inline-block"
-    }
+    } else
+        if (username == window.localStorage.getItem("username") && password == window.localStorage.getItem("password") && username !== "admin" && password !== "admin" && username !== "" && password !== "") {
+            window.localStorage.setItem("loggedIn", true);
+            alert(`Welcome back ${username} !`);
+            document.getElementById("login-failed").style.display = "block";
+            document.getElementById("login-failed").innerHTML = "Login Success";
+            document.getElementById("login-failed").style.color = "green";
+        }
+        else {
+            alert("Wrong username or password !!!");
+            window.localStorage.setItem("loggedIn", false);
+            document.getElementById("login-failed").style.display = "block";
+        }
 })
 
 signoutbutton.addEventListener("click", function (event) {
