@@ -49,8 +49,8 @@ body {
     text-align: center;
     justify-content: center;
     display: flex;
-    align-items:center;
-    padding: 0 20px ;
+    align-items: center;
+    padding: 0 20px;
 }
 
 .header__nav li:hover {
@@ -277,7 +277,8 @@ body {
     margin-top: 8px;
 }
 
-.sign-in, .signed-in {
+.sign-in,
+.signed-in {
     position: relative;
     float: right;
     margin-right: 30px;
@@ -327,24 +328,29 @@ body {
 .sign-in:hover .login-form {
     display: flex;
 }
-.signed-in:hover .login-form{
-    display: flex;  
+
+.signed-in:hover .login-form {
+    display: flex;
 }
-.sign-in p{
+
+.sign-in p {
     color: red;
     display: none;
 }
-.body-airpollution{
+
+.body-airpollution {
     width: 100%;
     height: 567px;
 }
-.body-airpollution-content-sections{
+
+.body-airpollution-content-sections {
     font-weight: bold;
     float: left;
     height: 100%;
     width: 40%;
 }
-.body-airpollution-content{
+
+.body-airpollution-content {
     justify-content: space-around;
     display: flex;
     align-items: center;
@@ -355,16 +361,19 @@ body {
     display: flex;
     margin-top: 30px;
 }
-.body-airpollution-content-sections div{
+
+.body-airpollution-content-sections div {
     font-size: 30px;
     height: 50px;
     width: 100%
 }
-.body-airpollution-content-sections div:not(:first-child){
+
+.body-airpollution-content-sections div:not(:first-child) {
     font-size: 30px;
     margin-top: 54px;
-    
+
 }
+
 .body-airpollution-content-sections {
     height: 474px;
     align-items: center;
@@ -372,10 +381,12 @@ body {
     flex-direction: column;
     display: flex;
 }
-#airpollution-causes{
-background-color: black;
-color: white;
+
+#airpollution-causes {
+    background-color: black;
+    color: white;
 }
-.body-airpollution-content__video{
+
+.body-airpollution-content__video {
     padding-bottom: 50px;
 }

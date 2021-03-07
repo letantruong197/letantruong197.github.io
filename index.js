@@ -16,9 +16,13 @@ loginbutton.addEventListener("click", function (event) {
     let password = document.getElementsByName("password")[0].value;
     if (username == window.localStorage.getItem("username") && password == window.localStorage.getItem("password")) {
         window.localStorage.setItem("loggedIn", true);
-        alert(`Welcome back ${username} !`)
+        alert(`Welcome back ${username} !`);
+        document.getElementById("login-failed").style.display = "block";
+        document.getElementById("login-failed").innerHTML = "Login Success";
+        document.getElementById("login-failed").style.color = "green";
     } else {
         window.localStorage.setItem("loggedIn", false);
+        document.getElementById("login-failed").style.display = "block";
     }
     if (window.localStorage.getItem("loggedIn") == "true") {
         let signedIn = document.getElementsByClassName("signed-in")[0];
@@ -35,15 +39,15 @@ signoutbutton.addEventListener("click", function (event) {
     document.getElementsByName("password")[0].value = "";
     document.getElementsByName("username")[0].value = "";
 })
-function loginFailed(){
-    if(window.localStorage.getItem("loggedIn") == "false"){
-        document.getElementById("login-failed").style.display = "block";
-    }else{
-        document.getElementById("login-failed").style.display = "block";
-        document.getElementById("login-failed").innerHTML = "Login Success";
-        document.getElementById("login-failed").style.color = "green";
-    }
-}
+// function loginFailed() {
+//     if (window.localStorage.getItem("loggedIn") == "false" && window.localStorage.getItem("username") == "" && window.localStorage.getItem("password") == "" ) {
+//         document.getElementById("login-failed").style.display = "block";
+//     } else {
+//         document.getElementById("login-failed").style.display = "block";
+//         document.getElementById("login-failed").innerHTML = "Login Success";
+//         document.getElementById("login-failed").style.color = "green";
+//     }
+// }
 let airpollution__causes = document.getElementById("airpollution-causes")
 let airpollution__affect = document.getElementById("airpollution-affect")
 let airpollution__result = document.getElementById("airpollution-result")
@@ -52,7 +56,7 @@ let airpollution__video = document.getElementById("body-airpollution-content__vi
 let apcauses__video = document.getElementById("ap-causes__video")
 let videoAp = document.getElementById("video-ap");
 
-airpollution__causes.addEventListener("click",function(event){
+airpollution__causes.addEventListener("click", function (event) {
     airpollution__causes.style.backgroundColor = "black";
     airpollution__causes.style.color = "white";
     airpollution__causes.style.width = "100%";
@@ -65,7 +69,7 @@ airpollution__causes.addEventListener("click",function(event){
     apcauses__video.style.display = "block";
     videoAp.style.display = "none";
 })
-airpollution__affect.addEventListener("click",function(event){
+airpollution__affect.addEventListener("click", function (event) {
     airpollution__affect.style.backgroundColor = "black";
     airpollution__affect.style.color = "white";
     airpollution__affect.style.width = "100%";
@@ -75,12 +79,12 @@ airpollution__affect.addEventListener("click",function(event){
     airpollution__result.style.color = "black";
     airpollution__solution.style.color = "black";
     airpollution__solution.style.backgroundColor = "white";
-    videoAp.src="https://www.youtube.com/embed/e6rglsLy1Ys";
+    videoAp.src = "https://www.youtube.com/embed/e6rglsLy1Ys";
     apcauses__video.style.display = "none";
     videoAp.style.display = "block";
     apcauses__video.pause();
 })
-airpollution__result.addEventListener("click",function(event){
+airpollution__result.addEventListener("click", function (event) {
     airpollution__result.style.backgroundColor = "black";
     airpollution__result.style.color = "white";
     airpollution__result.style.width = "100%";
@@ -95,18 +99,18 @@ airpollution__result.addEventListener("click",function(event){
     videoAp.style.display = "block";
     apcauses__video.pause();
 })
-airpollution__solution.addEventListener("click",function(event){
-    airpollution__solution .style.backgroundColor = "black";
-    airpollution__solution .style.color = "white";
-    airpollution__solution .style.width = "100%";
+airpollution__solution.addEventListener("click", function (event) {
+    airpollution__solution.style.backgroundColor = "black";
+    airpollution__solution.style.color = "white";
+    airpollution__solution.style.width = "100%";
     airpollution__affect.style.backgroundColor = "white";
     airpollution__affect.style.color = "black";
     airpollution__causes.style.backgroundColor = "white";
     airpollution__causes.style.color = "black";
     airpollution__result.style.backgroundColor = "white";
     airpollution__result.style.color = "black";
-    videoAp.src="https://www.youtube.com/embed/yCU68dMOdHo";
+    videoAp.src = "https://www.youtube.com/embed/yCU68dMOdHo";
     apcauses__video.style.display = "none";
     videoAp.style.display = "block";
-    apcauses__video.pause();    
-   })
+    apcauses__video.pause();
+})
