@@ -2,6 +2,7 @@ let loginbutton = document.getElementsByClassName("login-button")[0];
 let signinbutton = document.getElementsByClassName("login-signup")[0];
 let signoutbutton = document.getElementsByClassName("signout-button")[0];
 let profilename = document.getElementById("profile-name");
+let signedIn = document.getElementsByClassName("signed-in")[0];
 let namepf = window.localStorage.getItem("username");
 signinbutton.addEventListener("click", function (event) {
     let username = document.getElementsByName("username")[0].value;
@@ -41,10 +42,9 @@ loginbutton.addEventListener("click", function (event) {
         document.getElementById("login-failed").style.display = "block";
     }else
     if (window.localStorage.getItem("loggedIn") == "true") {
-        let signedIn = document.getElementsByClassName("signed-in")[0];
         console.log(signedIn);
         document.getElementsByClassName("sign-in")[0].style.display = "none";
-        document.getElementsByClassName("signed-in")[0].style.display = "inline-block";
+        signedIn.style.display = "inline-block";
     }
         if (username == window.localStorage.getItem("username") && password == window.localStorage.getItem("password")) {
             window.localStorage.setItem("loggedIn", true);
@@ -73,7 +73,12 @@ signoutbutton.addEventListener("click", function (event) {
     document.getElementsByName("username")[0].value = "";
 })
 if(window.localStorage.getItem("loggedIn") == "true"){
-    profilename.innerHTML = profilename.innerHTML = namepf
+    profilename.innerHTML = namepf
+}
+if (window.localStorage.getItem("loggedIn") == "true") {
+    console.log(signedIn);
+    document.getElementsByClassName("sign-in")[0].style.display = "none";
+    signedIn.style.display = "inline-block";
 }
 let airpollution__causes = document.getElementById("airpollution-causes")
 let airpollution__affect = document.getElementById("airpollution-affect")
