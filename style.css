@@ -346,6 +346,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .body-content-climatechange {
     width: 100%;
     height: 567px;
@@ -355,20 +356,22 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .body-content-climatechange-content__text {
     font-weight: bold;
     float: left;
     height: 100%;
     width: 40%;
-    background-color: rgba(128,128,128,0.7);
+    background-color: rgba(128, 128, 128, 0.7);
     color: white;
 }
+
 .body-airpollution-content-sections {
     font-weight: bold;
     float: left;
     height: 100%;
     width: 40%;
-    background-color: rgba(255,255,255,0.7)
+    background-color: rgba(255, 255, 255, 0.7)
 }
 
 .body-content-climatechange-content {
@@ -377,7 +380,8 @@ body {
     align-items: center;
     text-align: center;
 }
-.body-airpollution-content{
+
+.body-airpollution-content {
     justify-content: space-around;
     display: flex;
     align-items: center;
@@ -388,19 +392,23 @@ body {
     display: flex;
     margin-top: 30px;
 }
+
 .body-airpollution-content__video {
     display: flex;
     margin-top: 30px;
 }
+
 .body-airpollution-content-sections div {
     font-size: 30px;
     height: 50px;
     width: 100%
 }
+
 .body-airpollution-content-sections div:not(:first-child) {
     font-size: 30px;
     margin-top: 54px;
 }
+
 .body-content-climatechange-content__text div {
     font-size: 30px;
     height: 50px;
@@ -418,8 +426,9 @@ body {
     justify-content: center;
     flex-direction: column;
     display: flex;
-    
+
 }
+
 .body-content-climatechange-content__text {
     height: 474px;
     align-items: center;
@@ -427,58 +436,70 @@ body {
     flex-direction: column;
     display: flex;
 }
+
 #airpollution-causes {
     background-color: black;
     color: white;
 }
-#climatechange-causes{
+
+#climatechange-causes {
     background-color: white;
     color: black;
 }
-#profile-name{
+
+#profile-name {
     color: black;
 }
+
 .body-airpollution-content__video {
     padding-bottom: 50px;
 }
-.body-content-climatechange-content__video{
+
+.body-content-climatechange-content__video {
     padding-bottom: 50px;
 }
-.body-content-problems-content__text h1{
+
+.body-content-problems-content__text h1 {
     margin-left: 20px;
     font-weight: bold;
     font-size: 30px;
     letter-spacing: 0.1em;
 }
-.body-airpollution-content-sections h1{
+
+.body-airpollution-content-sections h1 {
     margin-left: 20px;
     font-weight: bold;
     font-size: 30px;
     letter-spacing: 0.1em;
 }
-.body-content-climatechange-content__text h1{
+
+.body-content-climatechange-content__text h1 {
     margin-left: 20px;
     font-weight: bold;
     font-size: 30px;
     letter-spacing: 0.1em;
 }
-.body-content-discussion h1{
+
+.body-content-discussion h1 {
     margin-left: 20px;
     font-weight: bold;
     font-size: 30px;
     letter-spacing: 0.1em;
 }
-.discussion__input{
+
+.discussion__input {
     width: 100%;
 
 }
+
 .form__group {
     position: relative;
     padding: 15px 0 0;
     margin-top: 10px;
     width: 50%;
-    
+
 }
+
 .form__field {
     font-family: inherit;
     width: 100%;
@@ -491,22 +512,26 @@ body {
     background: transparent;
     transition: border-color 0.2s;
 }
+
 .form__field::placeholder {
     color: transparent;
 }
-.form__field:placeholder-shown ~ .form__label {
+
+.form__field:placeholder-shown~.form__label {
     font-size: 1.3rem;
     cursor: text;
     top: 20px;
 }
+
 .form__label {
     position: absolute;
     top: 0;
     display: block;
     transition: 0.2s;
     font-size: 1rem;
-    color:  rgba(231, 230, 230, 0.863);
+    color: rgba(231, 230, 230, 0.863);
 }
+
 .form__field:focus {
     padding-bottom: 6px;
     font-weight: 700;
@@ -514,7 +539,8 @@ body {
     border-image: linear-gradient(to right, #121313, #6f796f);
     border-image-slice: 1;
 }
-.form__field:focus ~ .form__label {
+
+.form__field:focus~.form__label {
     position: absolute;
     top: 0;
     display: block;
@@ -523,10 +549,13 @@ body {
     color: rgb(255, 255, 255);
     font-weight: 700;
 }
+
 /* reset input */
-.form__field:required, .form__field:invalid {
+.form__field:required,
+.form__field:invalid {
     box-shadow: none;
 }
+
 /* demo */
 .body-content-discussion-content {
     font-family: 'Poppins', sans-serif;
@@ -535,4 +564,63 @@ body {
     font-size: 1.5rem;
     background-color: #A9A9A9;
     padding-left: 10px;
+}
+
+.discussion-post {
+    width: 30%;
+}
+
+#postChat {
+    width: 20%;
+    margin-top: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+#chat-content b {
+    font-family: 'Lora', serif;
+    margin-right: 5px;
+}
+
+.body-content-discussion {
+    height: 100%;
+}
+
+#chat-content {
+    overflow: scroll;
+}
+
+#chat-content::-webkit-scrollbar {
+    width: 12px;
+}
+
+#chat-content::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+#chat-content::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(255, 0, 0, 0.8);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+#chat-content::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(255, 0, 0, 0.4);
+}
+#chat-content{
+    height: 250px;
+}
+span{
+    font-size: 20px;
+    font-weight: lighter;
+    font-style: italic;
 }

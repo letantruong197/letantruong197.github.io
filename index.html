@@ -22,13 +22,13 @@
                     <li><a href="#home">HOME</a></li>
                     <li><a href="#contact">ABOUT US</a></li>
                     <li><a href="#about">SOMETHING MORE INTERESTING</a></li>
-                    <li class="sign-in" style="display: inline-block;" >
+                    <li class="sign-in" style="display: inline-block;">
                         <a>Sign in</a>
                         <div class="login-form">
                             <input class="input__text" type="text" placeholder="Username" name="username">
                             <input class="input__text" type="password" placeholder="Password" name="password">
                             <p id="login-failed">Login Failed</p>
-                            <button onclick="loginFailed()" class="login-button btn">LOGIN</button>
+                            <button class="login-button btn">LOGIN</button>
                             <button class="login-signup btn">Sign Up</button>
                         </div>
                     </li>
@@ -144,13 +144,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="body-content-discussion">
+                <div data-aos="fade-up" class="body-content-discussion">
                     <h1>Discussion</h1>
                     <div class="body-content-discussion-content">
+                        <div id="chat-content">
+                        </div>
                         <div class="form__group field">
-                            <input type="input" class="form__field" placeholder="Name" name="name" id='name' required />
-                            <label for="name" class="form__label">Type in your think about the environment</label>
-                          </div>
+                            <input type="text" class="form__field"
+                                placeholder="Type in your think about the environment" name="chat" id="chat" required />
+                            <label onclick="clickinput()" for="name" class="form__label">Type in your thought about the environment</label>
+                        </div>
+                        <button id="postChat">Post</button>
                     </div>
                 </div>
             </div>

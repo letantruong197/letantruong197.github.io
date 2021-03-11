@@ -1,68 +1,87 @@
 let loginbutton = document.getElementsByClassName("login-button")[0];
-let signinbutton = document.getElementsByClassName("login-signup")[0];
+let signupbutton = document.getElementsByClassName("login-signup")[0];
 let signoutbutton = document.getElementsByClassName("signout-button")[0];
 let profilename = document.getElementById("profile-name");
 let signedIn = document.getElementsByClassName("signed-in")[0];
 let namepf = window.localStorage.getItem("username");
-signinbutton.addEventListener("click", function (event) {
+if (window.localStorage.getItem("users") === null) {
+    window.localStorage.setItem("users", JSON.stringify([]));
+}
+let users = JSON.parse(window.localStorage.getItem("users"))
+signupbutton.addEventListener("click", function (event) {
+    let userObj = {}
     let username = document.getElementsByName("username")[0].value;
     let password = document.getElementsByName("password")[0].value;
+    let hadUsers = users.find(o => o.name === username);
     console.log(username, password);
     if (username == "" || password == "") {
         alert("Please type your username or password to sign up !!!");
         window.localStorage.setItem("loggedIn", false);
         document.getElementById("login-failed").style.display = "block";
         document.getElementById("login-failed").innerHTML = "SignUp Failed";
-    } else if (username == "admin" || username == "Admin" || password == "admin" || password == "Admin") {
+        document.getElementsByClassName("body-content-discussion")[0].style.display = "none"
+    } else if (username.toLowerCase() == "admin" || password.toLowerCase() == "admin") {
         alert("You can't use that username !!!")
         window.localStorage.setItem("loggedIn", false);
         document.getElementById("login-failed").style.display = "block";
         document.getElementById("login-failed").innerHTML = "SignUp Failed";
-    } else if (username == window.localStorage.getItem("username")) {
+        document.getElementsByClassName("body-content-discussion")[0].style.display = "none"
+    } else if (hadUsers !== undefined && username == hadUsers.name) {
         window.localStorage.setItem("loggedIn", false);
         alert("The username have been used !!!");
         document.getElementById("login-failed").style.display = "block";
         document.getElementById("login-failed").innerHTML = "SignUp Failed";
+        document.getElementsByClassName("body-content-discussion")[0].style.display = "none"
+        location.reload();
     } else {
+        userObj.name = username
+        userObj.password = password
+        users.push(userObj)
         document.getElementById("login-failed").style.display = "block";
         document.getElementById("login-failed").innerHTML = "Signup Success";
         document.getElementById("login-failed").style.color = "green";
-        window.localStorage.setItem("username", username);
-        window.localStorage.setItem("password", password);
+        window.localStorage.setItem("users", JSON.stringify(users));
+        document.getElementsByClassName("body-content-discussion")[0].style.display = "block"
         location.reload();
     }
-})
 
+})
 loginbutton.addEventListener("click", function (event) {
     let username = document.getElementsByName("username")[0].value;
     let password = document.getElementsByName("password")[0].value;
-    if (username == "admin" || username == "Admin" || password == "admin" || password == "Admin") {
+    let hadUsers = users.find(o => o.name === username);
+    console.log(hadUsers)
+    if (username.toLowerCase() == "admin" || password.toLowerCase() == "admin") {
         alert("You can't use that username !!!")
         window.localStorage.setItem("loggedIn", false);
         document.getElementById("login-failed").style.display = "block";
-    }else
-    if (window.localStorage.getItem("loggedIn") == "true") {
-        console.log(signedIn);
-        document.getElementsByClassName("sign-in")[0].style.display = "none";
-        signedIn.style.display = "inline-block";
+    } else
+        if (window.localStorage.getItem("loggedIn") == "true") {
+            console.log(signedIn);
+            document.getElementsByClassName("sign-in")[0].style.display = "none";
+            signedIn.style.display = "inline-block";
+        }
+    if (hadUsers !== undefined &&username == hadUsers.name && password == hadUsers.password ) {
+        window.localStorage.setItem("loggedIn", true);
+        window.localStorage.setItem("currentUser", username);
+        alert(`Welcome back ${username} !`);
+        document.getElementById("login-failed").style.display = "block";
+        document.getElementById("login-failed").innerHTML = "Login Success";
+        document.getElementById("login-failed").style.color = "green";
+        document.getElementsByClassName("body-content-discussion")[0].style.display = "block"
+        location.reload()
     }
-        if (username == window.localStorage.getItem("username") && password == window.localStorage.getItem("password")) {
-            window.localStorage.setItem("loggedIn", true);
-            alert(`Welcome back ${username} !`);
-            document.getElementById("login-failed").style.display = "block";
-            document.getElementById("login-failed").innerHTML = "Login Success";
-            document.getElementById("login-failed").style.color = "green";
-            location.reload()
-        }
-        else if (username == "" || password == "") {
-            alert("Please type your username or password !!!");
-            window.localStorage.setItem("loggedIn", false);
-            document.getElementById("login-failed").style.display = "block";
-        } else {
-            alert("Wrong username or password !!!");
-            window.localStorage.setItem("loggedIn", false);
-            document.getElementById("login-failed").style.display = "block";
-        }
+    else if (username == "" || password == "") {
+        alert("Please type your username or password !!!");
+        window.localStorage.setItem("loggedIn", false);
+        document.getElementById("login-failed").style.display = "block";
+        document.getElementsByClassName("body-content-discussion")[0].style.display = "none"
+    } else {
+        alert("Wrong username or password !!!");
+        window.localStorage.setItem("loggedIn", false);
+        document.getElementById("login-failed").style.display = "block";
+        document.getElementsByClassName("body-content-discussion")[0].style.display = "none"
+    }
 })
 
 signoutbutton.addEventListener("click", function (event) {
@@ -71,9 +90,11 @@ signoutbutton.addEventListener("click", function (event) {
     document.getElementsByClassName("signed-in")[0].style.display = "none";
     document.getElementsByName("password")[0].value = "";
     document.getElementsByName("username")[0].value = "";
+    document.getElementsByClassName("body-content-discussion")[0].style.display = "none"
+    location.reload()
 })
-if(window.localStorage.getItem("loggedIn") == "true"){
-    profilename.innerHTML = namepf
+if (window.localStorage.getItem("loggedIn") == "true") {
+    profilename.innerHTML = window.localStorage.getItem("currentUser")
 }
 if (window.localStorage.getItem("loggedIn") == "true") {
     console.log(signedIn);
@@ -208,3 +229,40 @@ climatechange__solution.addEventListener("click", function (event) {
     videocm.style.display = "block";
     apcauses__video.pause();
 })
+if (window.localStorage.getItem("loggedIn") == "true") {
+    document.getElementsByClassName("body-content-discussion")[0].style.display = "block"
+} else {
+    document.getElementsByClassName("body-content-discussion")[0].style.display = "none"
+}
+if (window.localStorage.getItem("chatcontent") === null) {
+    window.localStorage.setItem("chatcontent", JSON.stringify([]));
+}
+let chatcontent = JSON.parse(window.localStorage.getItem("chatcontent"));
+let chatboxcontent = document.getElementById("chat-content")
+let chatinput = document.getElementById("chat")
+function buildchatcontent() {
+    let HTML = ""
+    for (i = 0; i < chatcontent.length; i++) {
+        HTML += `<div><b>${chatcontent[i].name} :</b><span>${chatcontent[i].message}</span></div>`
+    } 
+    chatboxcontent.innerHTML = HTML
+    chatinput.value = ""
+}
+function clickinput(){
+    document.getElementById("chat").focus();
+}
+buildchatcontent()
+let messageChat = document.getElementById("chat")
+let postchat = document.getElementById("postChat")
+postchat.addEventListener("click", function (event) {
+    let messageObj = {}
+    if(messageChat.value == ""){
+        alert("Type in your thought !!!")
+    }else{
+    messageObj.name = window.localStorage.getItem("currentUser")
+    messageObj.message = messageChat.value
+    chatcontent.push(messageObj)
+    window.localStorage.setItem("chatcontent", JSON.stringify(chatcontent))
+    buildchatcontent()}
+})
+
