@@ -265,4 +265,9 @@ postchat.addEventListener("click", function (event) {
     window.localStorage.setItem("chatcontent", JSON.stringify(chatcontent))
     buildchatcontent()}
 })
-
+function facebook(){
+    window.open(
+        'https://www.facebook.com/truong.tun.188/',
+        '_blank' // <- This is what makes it open in a new window.
+      );
+}
