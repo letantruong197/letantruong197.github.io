@@ -677,3 +677,6 @@ h2{
     letter-spacing: 0.1em;
     color: white;
 }
+.link-discussion{
+    cursor:pointer;
+}

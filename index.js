@@ -271,3 +271,11 @@ function facebook(){
         '_blank' // <- This is what makes it open in a new window.
       );
 }
+function link(){
+    if(window.localStorage.getItem("loggedIn") == "false"){
+        alert("You need to sign in to go to discussion !")
+    }else{
+        document.getElementById("link-discussion").href = "#discussion-link"
+        document.getElementById("link-discussion").click()
+    }
+}
