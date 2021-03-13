@@ -21,7 +21,7 @@ signupbutton.addEventListener("click", function (event) {
         document.getElementById("login-failed").innerHTML = "SignUp Failed";
         document.getElementsByClassName("body-content-discussion")[0].style.display = "none"
     } else if (username.toLowerCase() == "admin" || password.toLowerCase() == "admin") {
-        alert("You can't use that username !!!")
+        alert("You can't use that username or password !!!")
         window.localStorage.setItem("loggedIn", false);
         document.getElementById("login-failed").style.display = "block";
         document.getElementById("login-failed").innerHTML = "SignUp Failed";
