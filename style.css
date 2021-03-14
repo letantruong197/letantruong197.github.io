@@ -51,26 +51,16 @@ body {
     align-items: center;
     padding: 0 20px;
 }
-li {
-    margin-bottom: 10px;
-}
-.cool-link {
+.cool-link{
     display: inline-block;
     color: #000;
     text-decoration: none;
+    transition: 0.3s ease-in;
+    border-bottom: solid 2px black;
 }
-.cool-link::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #000;
-    transition: width 0.3s;
+.cool-link:hover {
+    border-bottom: solid 5px black;
 }
-.cool-link:hover::after {
-    width: 100%;
-}
-
 .header-intro__img {
     width: 100vw;
     height: 650px;

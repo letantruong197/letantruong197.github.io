@@ -168,11 +168,11 @@ airpollution__solution.addEventListener("click", function (event) {
     apcauses__video.pause();
 })
 
-let climatechange__causes = document.getElementById("climatechange-causes")
-let climatechange__affect = document.getElementById("climatechange-affect")
-let climatechange__result = document.getElementById("climatechange-result")
-let climatechange__solution = document.getElementById("climatechange-solution")
-let climatechange__video = document.getElementById("body-content-climatechange-content__video")
+let solution__energysaving = document.getElementById("solution-causes")
+let solution__affect = document.getElementById("solution-affect")
+let solution__result = document.getElementById("solution-result")
+let solution__solution = document.getElementById("solution-solution")
+let solution__video = document.getElementById("body-content-solution-content__video")
 let videocm = document.getElementById("video-cm");
 climatechange__causes.addEventListener("click", function (event) {
     climatechange__causes.style.backgroundColor = "white";
