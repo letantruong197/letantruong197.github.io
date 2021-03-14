@@ -61,7 +61,7 @@ loginbutton.addEventListener("click", function (event) {
             document.getElementsByClassName("sign-in")[0].style.display = "none";
             signedIn.style.display = "inline-block";
         }
-    if (hadUsers !== undefined &&username == hadUsers.name && password == hadUsers.password ) {
+    if (hadUsers !== undefined && username == hadUsers.name && password == hadUsers.password) {
         window.localStorage.setItem("loggedIn", true);
         window.localStorage.setItem("currentUser", username);
         alert(`Welcome back ${username} !`);
@@ -168,13 +168,13 @@ airpollution__solution.addEventListener("click", function (event) {
     apcauses__video.pause();
 })
 
-let solution__energysaving = document.getElementById("solution-causes")
-let solution__affect = document.getElementById("solution-affect")
-let solution__result = document.getElementById("solution-result")
-let solution__solution = document.getElementById("solution-solution")
-let solution__video = document.getElementById("body-content-solution-content__video")
+let climatechange__causes = document.getElementById("climatechange-causes")
+let climatechange__affect = document.getElementById("climatechange-affect")
+let climatechange__result = document.getElementById("climatechange-result")
+let climatechange__solution = document.getElementById("climatechange-solution")
+let climatechange__video = document.getElementById("body-content-solution-content__video")
 let videocm = document.getElementById("video-cm");
-climatechange__causes.addEventListener("click", function (event) {
+climatechange__causes.addEventListener("click", function(event) {
     climatechange__causes.style.backgroundColor = "white";
     climatechange__causes.style.color = "black";
     climatechange__causes.style.width = "100%";
@@ -229,6 +229,7 @@ climatechange__solution.addEventListener("click", function (event) {
     videocm.style.display = "block";
     apcauses__video.pause();
 })
+
 if (window.localStorage.getItem("loggedIn") == "true") {
     document.getElementsByClassName("body-content-discussion")[0].style.display = "block"
 } else {
@@ -237,44 +238,50 @@ if (window.localStorage.getItem("loggedIn") == "true") {
 if (window.localStorage.getItem("chatcontent") === null) {
     window.localStorage.setItem("chatcontent", JSON.stringify([]));
 }
+
 let chatcontent = JSON.parse(window.localStorage.getItem("chatcontent"));
 let chatboxcontent = document.getElementById("chat-content")
 let chatinput = document.getElementById("chat")
+buildchatcontent()
 function buildchatcontent() {
     let HTML = ""
     for (i = 0; i < chatcontent.length; i++) {
         HTML += `<div><b>${chatcontent[i].name} :</b><span>${chatcontent[i].message}</span></div>`
-    } 
+    }
     chatboxcontent.innerHTML = HTML
     chatinput.value = ""
 }
-function clickinput(){
-    document.getElementById("chat").focus();
-}
-buildchatcontent()
+
+
 let messageChat = document.getElementById("chat")
 let postchat = document.getElementById("postChat")
 postchat.addEventListener("click", function (event) {
     let messageObj = {}
-    if(messageChat.value == ""){
+    if (messageChat.value == "") {
         alert("Type in your thought !!!")
-    }else{
-    messageObj.name = window.localStorage.getItem("currentUser")
-    messageObj.message = messageChat.value
-    chatcontent.push(messageObj)
-    window.localStorage.setItem("chatcontent", JSON.stringify(chatcontent))
-    buildchatcontent()}
+    } else {
+        messageObj.name = window.localStorage.getItem("currentUser")
+        messageObj.message = messageChat.value
+        chatcontent.push(messageObj)
+        window.localStorage.setItem("chatcontent", JSON.stringify(chatcontent))
+        buildchatcontent()
+    }
+    console.log()
 })
-function facebook(){
+function clickinput() {
+    document.getElementById("chat").focus();
+}
+
+function facebook() {
     window.open(
         'https://www.facebook.com/truong.tun.188/',
         '_blank' // <- This is what makes it open in a new window.
-      );
+    );
 }
-function link(){
-    if(window.localStorage.getItem("loggedIn") == "false"){
+function link() {
+    if (window.localStorage.getItem("loggedIn") == "false") {
         alert("You need to sign in to go to discussion !")
-    }else{
+    } else {
         document.getElementById("link-discussion").href = "#discussion-link"
         document.getElementById("link-discussion").click()
     }
