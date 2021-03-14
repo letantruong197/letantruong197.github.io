@@ -51,10 +51,24 @@ body {
     align-items: center;
     padding: 0 20px;
 }
-
-.header__nav li:hover {
-    color: white;
-    background-color: black;
+li {
+    margin-bottom: 10px;
+}
+.cool-link {
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+}
+.cool-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width 0.3s;
+}
+.cool-link:hover::after {
+    width: 100%;
 }
 
 .header-intro__img {
