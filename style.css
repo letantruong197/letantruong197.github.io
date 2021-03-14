@@ -101,6 +101,7 @@ body {
 .body-content-environment__text h1 {
     text-align: center;
     font-weight: bold;
+    letter-spacing: 0.1em;
 }
 
 .body-content-environment-content {
