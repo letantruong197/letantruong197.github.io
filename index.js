@@ -238,7 +238,8 @@ if (window.localStorage.getItem("loggedIn") == "true") {
 if (window.localStorage.getItem("chatcontent") === null) {
     window.localStorage.setItem("chatcontent", JSON.stringify([]));
 }
-
+let time = new Date()
+let gettime = time.toLocaleDateString()
 let chatcontent = JSON.parse(window.localStorage.getItem("chatcontent"));
 let chatboxcontent = document.getElementById("chat-content")
 let chatinput = document.getElementById("chat")
@@ -246,12 +247,12 @@ buildchatcontent()
 function buildchatcontent() {
     let HTML = ""
     for (i = 0; i < chatcontent.length; i++) {
-        HTML += `<div><b>${chatcontent[i].name} :</b><span>${chatcontent[i].message}</span></div>`
+        HTML += `<div><b>${chatcontent[i].name} :</b><span>${chatcontent[i].message}</span>   <span id="datetime">${chatcontent[i].date}</span></div>` 
     }
-    chatboxcontent.innerHTML = HTML
+    chatboxcontent.innerHTML = HTML 
     chatinput.value = ""
 }
-
+console.log(gettime)
 
 let messageChat = document.getElementById("chat")
 let postchat = document.getElementById("postChat")
@@ -262,9 +263,12 @@ postchat.addEventListener("click", function (event) {
     } else {
         messageObj.name = window.localStorage.getItem("currentUser")
         messageObj.message = messageChat.value
+        messageObj.date = gettime
         chatcontent.push(messageObj)
         window.localStorage.setItem("chatcontent", JSON.stringify(chatcontent))
         buildchatcontent()
+        document.getElementById("datetime").style = "float : right"
+        document.getElementById("datetime").style.opacity = 0.5
     }
     console.log()
 })

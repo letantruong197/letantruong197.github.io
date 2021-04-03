@@ -597,6 +597,7 @@ body {
 #chat-content {
     overflow: scroll;
     overflow-x: hidden  ;
+    width: 98%;
 }
 
 #chat-content::-webkit-scrollbar {
@@ -684,4 +685,12 @@ h2{
 }
 .link-discussion{
     cursor:pointer;
+}
+.date{
+    float: right;
+}
+#datetime {
+    float: right;
+    opacity: 0.5 ;
+    margin-right: 10px;
 }
