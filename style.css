@@ -61,6 +61,7 @@ body {
 .cool-link:hover {
     border-bottom: solid 5px black;
 }
+
 .header-intro__img {
     width: 100vw;
     height: 650px;
@@ -281,7 +282,12 @@ body {
     margin-top: 8px;
 }
 
-.sign-in,
+.sign-in:hover{
+    background-color: #656565;
+    color: white;
+    display: inline-block;
+    transition: 0.3s ease-in;
+}
 .signed-in {
     position: relative;
     float: right;
