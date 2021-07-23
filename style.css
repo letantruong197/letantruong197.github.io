@@ -295,7 +295,12 @@ body {
     float: right;
     margin-right: 30px;
 }
-
+.signed-in:hover{
+    background-color: #656565;
+    color: white;
+    display: inline-block;
+    transition: 0.3s ease-in;
+}
 .login-form {
     position: absolute;
     right: 20px;
